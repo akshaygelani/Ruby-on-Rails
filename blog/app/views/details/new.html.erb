@@ -1,0 +1,49 @@
+<h1>Product Details</h1>
+<%= form_for @detail do |f| %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+  <%= f.label :description %>
+  <%= f.text_area :description,size: "20x5" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :color %>
+    <%= f.select :color, ['Red','Blue','Orange','Yellow','White','Black','Blue','Pink']%><br><br>
+  </div>
+
+  <div class="field">
+    <%= label_tag :email, "Email Field" %>
+    <%= email_field_tag :address %>
+    <%= label_tag :date, "Date Picker Field" %>
+    <%= date_field_tag :purchasedate %>
+  </div>
+
+  <div class="field">
+    <%= radio_button_tag :age, "Electronics" %>
+    <%= label_tag :age_child, "Electronics" %>
+    <%= radio_button_tag :age, "Furniture" %>
+    <%= label :age_adult_tag, "Furniture" %>
+  </div>
+
+  <div class="field">
+    <%= check_box_tag :Electronics %>
+    <%= label_tag :Electronics, "Electronics" %>
+    <%= check_box_tag :Furniture %>
+    <%= label_tag :Furniture, "Furniture" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+
+<% end %>

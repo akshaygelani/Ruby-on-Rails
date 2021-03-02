@@ -1,0 +1,14 @@
+<h1>Details</h1>
+<%= form_tag do %>
+
+  <%== print_header %>
+  <div class="field">
+    <%= label_tag :string  %>
+    <%= text_field_tag :name, nil,placeholder: 'Enter your String'  %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag 'Submit' %>
+  </div>
+
+<% end %>
