@@ -1,0 +1,27 @@
+<h1>
+  Companies
+</h1>
+<table border="1px solid black" >
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Ticker_Symbol</th>
+    <th>RiskFactor</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+    <% @companies.each do |c| %>
+        <tr>
+          <td><%= c.name %></td>
+          <td><%= c.ticker_symbol %></td>
+          <td><%= c.risk_factor %></td>
+          <td>
+            <a href="/companies/<%=c.id %>">
+              Show
+            </a>
+          </td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
